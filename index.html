@@ -1362,26 +1362,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const wrap  = document.getElementById("featuredWrap");
 
   // INDICADOR (para que sepas si el script corre)
-  const indicator = document.createElement("div");
-  indicator.style.position = "fixed";
-  indicator.style.left = "10px";
-  indicator.style.top = "10px";
-  indicator.style.zIndex = "99999";
-  indicator.style.padding = "6px 10px";
-  indicator.style.borderRadius = "999px";
-  indicator.style.fontSize = "12px";
-  indicator.style.fontWeight = "800";
-  indicator.style.background = "rgba(0,0,0,.55)";
-  indicator.style.border = "1px solid rgba(255,255,255,.18)";
-  indicator.style.backdropFilter = "blur(8px)";
-  indicator.style.color = "white";
-  indicator.textContent = "Autoplay: iniciando…";
-  document.body.appendChild(indicator);
-
-  if(!track || !wrap){
-    indicator.textContent = "Autoplay: ERROR (no encontró carrusel)";
-    return;
-  }
 
   // Selecciona tarjetas
   const cards = [...track.querySelectorAll(".featured-card")];
